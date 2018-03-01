@@ -49,3 +49,10 @@
       java -jar WebSpider-1.00.jar https://www.google.com
 	
 # Sample Execution -
+
+mvn exec:java -Dexec.mainClass="com.website.links.WebSpider" -Dexec.args="https://www.grofers.com --setTimeout 30 --Chrome" 
+
+Report.txt - 
+********************************* https://www.grofers.com *********************************
+Total No. of Links : 158
+No. of Broken Links : 0
