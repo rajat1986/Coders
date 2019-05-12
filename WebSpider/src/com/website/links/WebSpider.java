@@ -232,12 +232,16 @@ public class WebSpider {
         			//System.out.println("Working Link : "+currentUrl);
         		}
         		return false;
-        	} else {
+        	} else if(statusCode>399){
         		if(debug) {
         			//System.out.println("Broken Link : "+currentUrl+ "\tstatusCode : "+statusCode);
         		}
         		return true;
         	}  
+		else
+		{
+			return false;
+		}
     	}
     	catch(FailingHttpStatusCodeException failCodeException) {
     		if(debug) {
